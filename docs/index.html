@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Configuração de máquina para o workshop</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="refresh" content="0; url=https://eliasnogueira.github.io/appium-workshop/index.html" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" href="css/ghpages-materialize.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="blue-grey darken-1">
+            <div class="nav-wrapper container">
+                <a href="#!" class="brand-logo">&nbsp;Configuração de máquina para o workshop</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col l9">
+                <p class="caption">Siga todos os passos das pré-condições para que você possa desenvolver e executar os scripts de teste para o workshop</h5>
+                <hr/>
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div id="instalacao_java" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Instalar Java JDK</div>
+                        <div class="collapsible-body">
+                            <ol>
+                                <li>Acessar o site <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></li>
+                                <li>Selecionar o item <i>Accept License Agreement</i></li>
+                                <li>Clicar no link referente ao instalador de acordo com seu sistema operacional (<i>Linux, Solaris, MacOSx, Windows</i>)</li>
+                                <li>Aguardar o download do arquivo instalador</li>
+                                <li>Clicar no arquivo executável e seguir os passos propostos pelo instalador</li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_instalacao_java">
+                                <label for="check_instalacao_java">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="configuracao_java" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Configurar Java JDK (Windows)</div>
+                        <div class="collapsible-body">
+                            <ol>
+                                <li>Vá até as Variáveis de Ambiente no Windows e:</li>
+                                <ol>
+                                    <li>Adicione a seguinte variável com o respectivo valor e clique em <i>OK</i></li>
+                                    <ol>
+                                        <li>Nome da variável: JAVA_HOME</li>
+                                        <li>Valor da variável: C:\Program Files\Java\jdk1.8.0_121</li>
+                                        <p><strong>Atenção: </strong>o Valor da variável é ilustrativo. O diretório correto deve ser o local onde está instalado o JDK, podendo haver diferenças na versão (números após o jdk1.8.0)</p>
+                                    </ol>
+                                </ol>
+                                <li>Selecione a variável <code>PATH</code> e clique em <i>Editar...</i></li>
+                                <li>Clique no botão <i>Novo</i> e adicione o seguinte valor de variável</li>
+                                <ol>
+                                    <li>%JAVA_HOME%\bin</li>
+                                    <p><strong>Atenção: </strong> se a variável PATH não existir, crie a variável com o mesmo valor de variável.</p>
+                                </ol>
+                                <li>Feche todas as telas clicando no botão <i>OK</i> e abra o Prompt de Comando. Se ele estiver aberto, feche-o e abra um novo</li>
+                                <li>Digite, no Prompt de Comando a  palavra <code>java</code> e pressione a tela ENTER</li>
+                                <li>Deve ser apresentado uma lista de opções (parâmetros) para o comando. A primeira linha possui o texto <i>“Uso: java [-options] class [args...]”</i></li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_configuracao_java">
+                                <label for="check_configuracao_java">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="ide" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Instalar uma IDE de Desenvolvimento</div>
+                        <div class="collapsible-body">
+                            <p>Você pode usar a IDE de sua escolha para desenvolver os seus scripts de teste. Se você não tiver uma IDE, recomendo:</p>
+                            <ol>
+                                <li><a href="https://www.jetbrains.com/idea/download" target="_blank">IntelliJ IDEA</a></li>
+                                <li><a href="http://www.eclipse.org/downloads/packages/release/2018-09/r/eclipse-ide-java-developers" target="_blank">Eclipse IDE for Java Developers</a></li>
+                                <li><a href="https://netbeans.org/downloads/index.html" target="_blank">Netbeans</a></li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_ide">
+                                <label for="check_ide">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="instalar_nodejs" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Instalar NodeJS</div>
+                        <div class="collapsible-body">
+                            <ol>
+                                <li>Acessar o site <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a></li>
+                                <li>Clique no icone referente a o seu sistema operacional</li>
+                                <li>Aguardar o download do arquivo</li>
+                                <li>Clicar no arquivo executável e seguir os passos propostos pelo instalador</li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_instalar_nodejs">
+                                <label for="check_instalar_nodejs">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="instalar_http_server" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Instalar http-server</div>
+                        <div class="collapsible-body">
+                            <ol>
+                                <li>Abra o Prompt de Comando/Terminal</li>
+                                <li>Digite o seguinte comando e pressione ENTER <code>npm install -g http-server</code></li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_instalar_http_server">
+                                <label for="check_instalar_http_server">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="projeto" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Download do repositório</div>
+                        <div class="collapsible-body">
+                            <ol>
+                                <li>Efetue o clone do projeto, ou download. <a target="_blank" href="https://github.com/eliasnogueira/aula-topicos-avancados-teste">https://github.com/eliasnogueira/aula-topicos-avancados-teste</a></li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_projeto">
+                                <label for="check_projeto">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="importar" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Importar o projeto de back-end</div>
+                        <div class="collapsible-body">
+                            <ol>
+                                <li>Faça a importação do projeto Maven na sua IDE de desenvolvimento na pasta <i>rest-api-backend</i></li>
+                                <li>O tipo de importação do projeto deve ser <i>Maven</i></li>
+                                <li>Aguarde enquanto as dependências do projeto serão baixadas</li>
+                                <li>Caso algum problema ocorra no item acima, entre em contato com o professor</li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_importar">
+                                <label for="check_importar">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="drivers" class="collapsible-header"><i class="fa fa-arrow-right" aria-hidden="true"></i>Drivers para Selenium</div>
+                        <div class="collapsible-body">
+                            <ol>
+                                <li>Crie uma pasta no diretório do repositório que você efetuou download chamada <i>drivers</i></li>
+                                <li>Dependendo do seu browser e do Sistema Operacional você irá baixar uma dos drivers abaixo:</li>
+                                    <ol>
+                                        <li>Windows</li>
+                                            <ol>
+                                                <li><a href="https://chromedriver.storage.googleapis.com/2.44/chromedriver_win32.zip">Chrome</a></li>
+                                                <li><a href="https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-win64.zip">Firefox</a></li>
+                                            </ol>
+                                        <li>Mac</li>
+                                            <ol>
+                                                <li><a href="https://chromedriver.storage.googleapis.com/2.44/chromedriver_mac64.zip">Chrome</a></li>
+                                                <li><a href="https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-macos.tar.gz">Firefox</a></li>
+                                            </ol>
+                                        <li>Linux</li>
+                                            <ol>
+                                                <li><a href="https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip">Chrome</a></li>
+                                                <li><a href="https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz">Firefox</a></li>
+                                            </ol>
+                                    </ol>
+                                <li>Vá até o local de download e faça a extração do arquivo</li>
+                                <li>Mova o arquivo para o diretório <i>drivers</i> recem criado</li>
+                            </ol>
+                            <p>
+                                <input type="checkbox" id="check_drivers">
+                                <label for="check_drivers">Já conclui este passo</label>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="duvidas" class="collapsible-header"><i class="fa fa-question" aria-hidden="true"></i>Dúvidas?</div>
+                        <div class="collapsible-body">
+                            <p>Se você tiver qualquer dúvida envie um e-mail para mim com o assunto <i>[Unisinos] Aula Tópicos Especiais</i><br>
+                                <img src="img/e-mail.png">
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/9cbaf33543.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

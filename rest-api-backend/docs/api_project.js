@@ -1,0 +1,1 @@
+define({  "name": "Person API",  "version": "0.1.0",  "description": "Person API description",  "title": "Person API",  "url": "https://localhost:4567",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2018-06-26T12:45:52.792Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }});
