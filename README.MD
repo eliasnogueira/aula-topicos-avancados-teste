@@ -18,6 +18,8 @@ Ela será nosso front-end de teste manual e automatizado.
 
 Esta pasta possui as pré condições para ter todo o ambiente de testes configurado.
 
+O mesmo pode ser acessado em https://eliasnogueira.github.io/aula-topicos-avancados-teste/
+
 ### rest-api-backend
 
 Esta é a aplicação de back-end, bem como nosso projeto para automatizar as demais camadas como REST (API) e Web.
