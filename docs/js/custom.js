@@ -33,6 +33,10 @@ $('#check_instalar_http_server').click(function () {
     this.checked === true ? $('#instalar_http_server').addClass(greenItem) : $('#instalar_http_server').removeClass(greenItem);
 });
 
+$('#check_instalar_postman').click(function () {
+    this.checked === true ? $('#instalar_postman').addClass(greenItem) : $('#instalar_postman').removeClass(greenItem);
+});
+
 $('#check_importar').click(function () {
     this.checked === true ? $('#importar').addClass(greenItem) : $('#importar').removeClass(greenItem);
 });
